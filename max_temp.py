@@ -39,7 +39,7 @@ def run_analytics():
     import pandas as pd
     import matplotlib.pyplot as plt
 
-    print("\n📂 Loading MRJob Results from output.txt")
+    print("\n Loading MRJob Results from output.txt")
 
     file = "output.txt"
 
@@ -50,7 +50,7 @@ def run_analytics():
 
     # -------- REMOVE NaN FROM TREND ----------
     df["Yearly_Trend"] = df["Max_Temperature_C"].diff()
-    df["Yearly_Trend"] = df["Yearly_Trend"].fillna(0)   # ✅ FIX HERE
+    df["Yearly_Trend"] = df["Yearly_Trend"].fillna(0)  
 
     print("\n📈 Yearly Temperature Trends")
     print(df)
